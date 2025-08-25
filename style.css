@@ -8,6 +8,7 @@ body {
   background: #f4b840;
   max-width: 800px;
   margin: auto;
+  border-radius: 10px;
 }
 
 /* navigation menu */
@@ -48,6 +49,7 @@ main {
   background: #347889;
   display: flex;
   margin-top: 20px;
+  border-radius: 25px;
 }
 
 .sidebar {
@@ -75,4 +77,29 @@ main {
 h2,
 h3 {
   margin: 0px;
+}
+/* Portfolio styles */
+.content h1 {
+  color: black;
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #eee;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #454545;
 }
