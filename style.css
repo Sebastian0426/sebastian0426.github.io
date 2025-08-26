@@ -8,7 +8,7 @@ body {
   background: #f4b840;
   max-width: 800px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 /* navigation menu */
@@ -49,7 +49,7 @@ main {
   background: #347889;
   display: flex;
   margin-top: 20px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .sidebar {
