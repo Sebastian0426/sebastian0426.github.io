@@ -2,6 +2,9 @@ body {
   color: rgb(45, 45, 45);
   padding: 10px;
   font-family: Arial, sans-serif;
+  background-image: url("images/F15.png");
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 #all-contents {
