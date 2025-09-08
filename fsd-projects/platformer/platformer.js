@@ -27,22 +27,34 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
+    //toggleGrid();
 
 
     // TODO 2 - Create Platforms
 
-
+createPlatform(375, 375, 125, 20, "" );
+createPlatform(0, 725, 75, 5);
+createPlatform(175, 695, 125, 20);
+createPlatform(350, 675, 125, 20);
+createPlatform(466.6, 550, 125, 20);
+createPlatform(800, 425, 125, 20);
+createPlatform(350, 250, 125, 20);
+createPlatform(250, 250, 125, 20);
+createPlatform(1050, 350, 125, 20);
+createPlatform(850, 700, 125, 20);
 
 
     // TODO 3 - Create Collectables
 
-
+createCollectable("hardDrive", 900, 650);
+createCollectable("floppyDisk",375, 200);
+createCollectable("tape", 1100, 300);
 
     
     // TODO 4 - Create Cannons
-
-
+createCannon("right", 800, 0)
+createCannon("bottom",700, 2000)
+createCannon("right", 600, 1500)
     
     
     //////////////////////////////////
