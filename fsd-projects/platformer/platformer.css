@@ -3,7 +3,7 @@ body {
 }
 
 canvas {
-  background-image: url(images/platformerBackground2) ;
+  background-image: url(platformer/images/platformerBackground2) ;
   background-size: cover;
   margin: 20px;
 }
