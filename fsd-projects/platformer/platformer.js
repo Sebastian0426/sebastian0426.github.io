@@ -49,6 +49,7 @@ createPlatform(850, 700, 125, 20, "white");
 createCollectable("hardDrive", 900, 650);
 createCollectable("floppyDisk",375, 200);
 createCollectable("tape", 1100, 300);
+createCollectable("hardDrive", 450, 600, 0, 1, 100, 650, 2);
 
     
     // TODO 4 - Create Cannons
