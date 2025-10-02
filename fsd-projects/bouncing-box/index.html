@@ -45,6 +45,7 @@
         var box = jQuery(".box"); // reference to the HTML .box element
         var board = jQuery(".board"); // reference to the HTML .board element
         var boardWidth = board.width(); // the maximum X-Coordinate of the screen
+        var boardHeight = jQuery(window).height();
 
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
@@ -52,14 +53,16 @@
         });
 
         // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
+        var interval = setInterval(update, 50);
 
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
+        board.on("click",handleBoardClick)
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -75,6 +78,11 @@
 var positionX = 0
 var points =  0
 var speed = 10
+var positionY = 0
+var speedY = 7
+var randomWidth = Math.random() * boardWidth;
+var randomHeight = Math.random() * boardHeight
+var boxMisses = 0
 
 
         /**
@@ -83,7 +91,7 @@ var speed = 10
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-moveBoxTo(positionX); 
+
 positionX += speed
           if (positionX >= boardWidth){
 (speed *= -1)
@@ -91,6 +99,15 @@ positionX += speed
           if (positionX <= 0){
             (speed *= -1)
           }
+positionY += speedY
+if (positionY > boardHeight){
+  speedY *= -1
+} if (positionY < 0){
+  (speedY *= -1)
+}
+
+moveBoxTo(positionX, positionY); 
+
         }
 
         /**
@@ -101,10 +118,22 @@ positionX += speed
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-positionX = 0;
+positionX = (randomWidth)
+positionY = (randomHeight)
 changeBoxText(points);
 points ++;
-speed = 3 * points + 10;
+if (points % 3 === 0){
+  (speed = points * 3 + 10)
+  (speedY = points * 4 + 10)
+}
+
+        }
+        function handleBoardClick() {
+boxMisses ++
+if (boxMisses = 10){
+
+    alert ("Game over")
+  }
         }
 
 
