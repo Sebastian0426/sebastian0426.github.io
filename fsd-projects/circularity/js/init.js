@@ -39,7 +39,7 @@ circles.push(circle);
 // drawCircle();
 // drawCircle();
         // TODO 7 : Use a loop to create multiple circles
-for(var i = 0; i < 1000; i++){
+for(var i = 0; i < 100000; i++){
     drawCircle();
 }
 
