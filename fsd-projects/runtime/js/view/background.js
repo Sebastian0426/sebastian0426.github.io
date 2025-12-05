@@ -29,8 +29,9 @@ var background = function (window) {
     // ANIMATION VARIABLES HERE //////////////////////////////////////
     //////////////////////////////////////////////////////////////////
     // TODO (several):
-var tree
-var buildings = []
+    var tree;
+    var buildings = [];
+    var randNum = Math.random;
     // called at the start of game and whenever the page is resized
     // add objects for display in background. draws each image added to the background once
     function render() {
@@ -59,26 +60,29 @@ var buildings = []
       }
       //   var sandFloor = draw.rect(canvasWidth, 400, "tan");
       //   sandFloor.y = 400
-      // sandFloor.addChild(sandFloor);  
+      // sandFloor.addChild(sandFloor);
       // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
 
-for (var i = 0; i < 5; ++i) {
-  var buildingHeight = Math.random * 50;
-  var building = draw.bitmap("img/kelp.png")
-  building.scaleX = .3
-  building.scaleY = .3
-  building.x = 500 * i;
-  building.y = groundY - 275;
-  background.addChild(building);
-  buildings.push(building);
-}
+      for (var i = 0; i < 100; ++i) {
+        if (Math.random() < 0.5) {
+          var building = draw.bitmap("img/kelp.png");
+        } else {
+          building = draw.bitmap("img/floaty-balls.png");
+        }
+        building.scaleX = 0.3;
+        building.scaleY = 0.3;
+        building.x = 500 * i;
+        building.y = groundY - 305;
+        background.addChild(building);
+        buildings.push(building);
+      }
 
       // TODO 3: Part 1 - Add a tree
       tree = draw.bitmap("img/coral-reef.png");
-      tree.scaleX = .3
-      tree.scaleY = .3
+      tree.scaleX = 0.3;
+      tree.scaleY = 0.3;
       tree.x = 0;
-      tree.y = -29;
+      tree.y = groundY -305;
       background.addChild(tree);
     } // end of render function - DO NOT DELETE
 
@@ -91,14 +95,14 @@ for (var i = 0; i < 5; ++i) {
       var groundY = ground.y;
 
       // TODO 3: Part 2 - Move the tree!
-tree.x = tree.x - 1;
+      tree.x = tree.x - 1;
 
-if (tree.x < -600) {
-  tree.x = canvasWidth;
-}
+      if (tree.x < -600) {
+        tree.x = canvasWidth;
+      }
       // TODO 4: Part 2 - Parallax
-      for (var i = 0; i <= buildings.length; i++){
-        buildings[i].x = buildings[i].x - .5
+      for (var i = 0; i <= buildings.length; i++) {
+        buildings[i].x = buildings[i].x - 0.5;
       }
     } // end of update function - DO NOT DELETE
 
