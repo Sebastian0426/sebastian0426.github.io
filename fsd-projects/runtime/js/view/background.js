@@ -61,14 +61,18 @@ var buildings = []
       //   sandFloor.y = 400
       // sandFloor.addChild(sandFloor);  
       // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
+
 for (var i = 0; i < 5; ++i) {
-  var buildingHeight = 300;
-  var building = draw.bitmap("img/kelp.png");
-  building.x = 200 * i;
-  building.y = groundY - buildingHeight;
+  var buildingHeight = Math.random * 50;
+  var building = draw.bitmap("img/kelp.png")
+  building.scaleX = .3
+  building.scaleY = .3
+  building.x = 500 * i;
+  building.y = groundY - 275;
   background.addChild(building);
   buildings.push(building);
 }
+
       // TODO 3: Part 1 - Add a tree
       tree = draw.bitmap("img/coral-reef.png");
       tree.scaleX = .3
@@ -93,6 +97,9 @@ if (tree.x < -600) {
   tree.x = canvasWidth;
 }
       // TODO 4: Part 2 - Parallax
+      for (var i = 0; i <= buildings.length; i++){
+        buildings[i].x = buildings[i].x - .5
+      }
     } // end of update function - DO NOT DELETE
 
     /* Make a createjs Container for the background and let it know about the render and upate functions*/
