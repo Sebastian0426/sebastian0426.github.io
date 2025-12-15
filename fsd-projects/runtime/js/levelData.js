@@ -36,6 +36,21 @@ var makeLevelData = function (window) {
           {type: "marker", x: 4000, y: groundY}
         ],
       },
+      {
+        name: "Super difficult final level",
+        number: 3,
+        speed: -3,
+        gameItems: [
+          { type: "sawblade", x: 400, y: groundY },
+          { type: "sawblade", x: 600, y: groundY },
+          { type: "sawblade", x: 900, y: groundY },
+          { type: "reward", x: 2000, y: groundY - 60},
+          { type: "enemy", x: 2500, y: groundY},
+          { type: "enemy", x: 2800, y: groundY},
+          {type: "sawblade", x: 2600, y: groundY + 200},
+          {type: "marker", x: 4000, y: groundY}
+        ],
+      }
     ];
     window.opspark.levelData = levelData;
   };

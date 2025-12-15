@@ -30,10 +30,11 @@ obstacleImage.x = -55
 obstacleImage.y = -25
 sawBladeHitZone.addChild(obstacleImage); 
 obstacleImage.scaleX = .45
-obstacleImage.scaleY = .45}
-createSawblade(400, groundY - 45)
-createSawblade(600, groundY - 100)
-createSawblade(900, groundY - 45)
+obstacleImage.scaleY = .45
+}
+// createSawblade(400, groundY - 45)
+// createSawblade(600, groundY - 100)
+// createSawblade(900, groundY - 45)
 
 function createEnemy(x, y){
 var enemy = game.createGameItem("enemy", 25);
@@ -52,9 +53,9 @@ enemy.onProjectileCollison = function () {
   game.increaseScore(100);
 enemy.fadeOut();
 }}
-createEnemy(400, groundY - 10);
-createEnemy(800, groundY - 100);
-createEnemy(1200, groundY - 50);
+// createEnemy(400, groundY - 10);
+// createEnemy(800, groundY - 100);
+// createEnemy(1200, groundY - 50);
 function createReward(x, y){
   var reward = game.createGameItem("health", 25)
   var greenSquare = draw.rect(50, 50, "green")
@@ -88,7 +89,19 @@ function createMarker(x, y){
 }
 function startLevel() {
       // TODO 13 goes below here
-
+var level = levelData[currentLevel]
+var levelObjects = gameItems
+for (var i =0; i <= 20; i++){
+  if (gameItems.type = "sawblade"){
+    createSawblade(gameItems.x, gameItems.y)
+  } else if (gameItems.type = "reward"){
+    createReward(gameItems.x, gameItems.y)
+  } else if (gameItems.type = "marker"){
+    createMarker(gameItems.x, gameItems.y)
+  } else if (gameItems.type = "enemy"){
+    createEnemy(gameItems.x, gameItems.y)
+  }
+}
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////
