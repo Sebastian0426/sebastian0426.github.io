@@ -64,8 +64,9 @@ var background = function (window) {
       // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
 
       for (var i = 0; i < 100; ++i) {
+        var building
         if (Math.random() < 0.5) {
-          var building = draw.bitmap("img/kelp.png");
+          building = draw.bitmap("img/kelp.png");
         } else {
           building = draw.bitmap("img/floaty-balls.png");
         }
