@@ -91,16 +91,17 @@ function createMarker(x, y){
 function startLevel() {
       // TODO 13 goes below here
 var level = levelData[currentLevel]
-var levelObjects = level.gameItems
-for (var i =0; i <= 20; i++){
-  if (levelObjects.type = "sawblade"){
-    createSawblade(levelObjects.x, levelObjects.y)
-  } else if (levelObjects.type = "reward"){
-    createReward(levelObjects.x, levelObjects.y)
-  } else if (levelObjects.type = "marker"){
-    createMarker(levelObjects.x, levelObjects.y)
-  } else if (levelObjects.type = "enemy"){
-    createEnemy(levelObjects.x, levelObjects.y)
+var levelObjects = level.gameItems[i]
+for (var i =0; i < level.gameItems.length; i++){
+  var eachObject = levelObjects[i]
+  if (eachObject.type = "sawblade"){
+    createSawblade(eachObject.x, eachObject.y)
+  } else if (eachObject.type = "reward"){
+    createReward(levelObjects.x, eachObject.y)
+  } else if (eachObject.type = "marker"){
+    createMarker(eachObject.x, eachObject.y)
+  } else if (eachObject.type = "enemy"){
+    createEnemy(eachObject.x, eachObject.y)
   }
 }
       //////////////////////////////////////////////
