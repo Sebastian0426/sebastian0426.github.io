@@ -102,7 +102,7 @@ var background = function (window) {
         tree.x = canvasWidth;
       }
       // TODO 4: Part 2 - Parallax
-      for (var i = 0; i <= buildings.length; i++) {
+      for (var i = 0; i < buildings.length; i++) {
         var eachBuilding = buildings[i];
       eachBuilding.x -= 0.5;
       }
