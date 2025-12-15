@@ -102,7 +102,8 @@ var background = function (window) {
       }
       // TODO 4: Part 2 - Parallax
       for (var i = 0; i <= buildings.length; i++) {
-        buildings[i].x = buildings[i].x - 0.5;
+        var eachBuilding = buildings[i];
+      eachBuilding.x -= 0.5;
       }
     } // end of update function - DO NOT DELETE
 

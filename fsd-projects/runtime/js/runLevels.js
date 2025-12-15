@@ -28,9 +28,10 @@ game.addGameItem(sawBladeHitZone);
 var obstacleImage = draw.bitmap("img/crashfih.png");
 obstacleImage.x = -55
 obstacleImage.y = -25
-sawBladeHitZone.addChild(obstacleImage); 
 obstacleImage.scaleX = .45
 obstacleImage.scaleY = .45
+sawBladeHitZone.addChild(obstacleImage); 
+
 }
 // createSawblade(400, groundY - 45)
 // createSawblade(600, groundY - 100)
@@ -90,16 +91,16 @@ function createMarker(x, y){
 function startLevel() {
       // TODO 13 goes below here
 var level = levelData[currentLevel]
-var levelObjects = gameItems
+var levelObjects = level.gameItems
 for (var i =0; i <= 20; i++){
-  if (gameItems.type = "sawblade"){
-    createSawblade(gameItems.x, gameItems.y)
-  } else if (gameItems.type = "reward"){
-    createReward(gameItems.x, gameItems.y)
-  } else if (gameItems.type = "marker"){
-    createMarker(gameItems.x, gameItems.y)
-  } else if (gameItems.type = "enemy"){
-    createEnemy(gameItems.x, gameItems.y)
+  if (levelObjects.type = "sawblade"){
+    createSawblade(levelObjects.x, levelObjects.y)
+  } else if (levelObjects.type = "reward"){
+    createReward(levelObjects.x, levelObjects.y)
+  } else if (levelObjects.type = "marker"){
+    createMarker(levelObjects.x, levelObjects.y)
+  } else if (levelObjects.type = "enemy"){
+    createEnemy(levelObjects.x, levelObjects.y)
   }
 }
       //////////////////////////////////////////////
