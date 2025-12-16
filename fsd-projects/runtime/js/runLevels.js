@@ -97,7 +97,7 @@ for (var i =0; i < levelObjects.length; i++){
   if (eachObject.type === "sawblade"){
     createSawblade(eachObject.x, eachObject.y)
   } else if (eachObject.type === "reward"){
-    createReward(eachObjects.x, eachObject.y)
+    createReward(eachObject.x, eachObject.y)
   } else if (eachObject.type === "marker"){
     createMarker(eachObject.x, eachObject.y)
   } else if (eachObject.type === "enemy"){
