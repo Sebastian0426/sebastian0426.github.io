@@ -58,7 +58,7 @@ enemy.fadeOut();
 // createEnemy(800, groundY - 100);
 // createEnemy(1200, groundY - 50);
 function createReward(x, y){
-  var reward = game.createGameItem("health", 25)
+  var reward = game.createGameItem("reward", 25)
   var greenSquare = draw.rect(50, 50, "green")
   greenSquare.x = -25
   greenSquare.y = -25
@@ -72,7 +72,7 @@ function createReward(x, y){
   }
 }
 function createMarker(x, y){
-  var marker = game.createGameItem("endGame", 1000)
+  var marker = game.createGameItem("marker", 1000)
   var yellowPole = draw.rect(10, 1000, "yellow")
   yellowPole.x = -25
   yellowPole.y = -25
@@ -92,12 +92,12 @@ function startLevel() {
       // TODO 13 goes below here
 var level = levelData[currentLevel]
 var levelObjects = level.gameItems
-for (var i =0; i < level.gameItems.length; i++){
+for (var i =0; i < levelObjects.length; i++){
   var eachObject = levelObjects[i]
   if (eachObject.type = "sawblade"){
     createSawblade(eachObject.x, eachObject.y)
   } else if (eachObject.type = "reward"){
-    createReward(levelObjects.x, eachObject.y)
+    createReward(eachObjects.x, eachObject.y)
   } else if (eachObject.type = "marker"){
     createMarker(eachObject.x, eachObject.y)
   } else if (eachObject.type = "enemy"){
