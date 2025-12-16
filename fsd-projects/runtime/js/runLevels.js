@@ -94,13 +94,13 @@ var level = levelData[currentLevel]
 var levelObjects = level.gameItems
 for (var i =0; i < levelObjects.length; i++){
   var eachObject = levelObjects[i]
-  if (eachObject.type = "sawblade"){
+  if (eachObject.type === "sawblade"){
     createSawblade(eachObject.x, eachObject.y)
-  } else if (eachObject.type = "reward"){
+  } else if (eachObject.type === "reward"){
     createReward(eachObjects.x, eachObject.y)
-  } else if (eachObject.type = "marker"){
+  } else if (eachObject.type === "marker"){
     createMarker(eachObject.x, eachObject.y)
-  } else if (eachObject.type = "enemy"){
+  } else if (eachObject.type === "enemy"){
     createEnemy(eachObject.x, eachObject.y)
   }
 }
