@@ -91,7 +91,7 @@ function createMarker(x, y){
 function startLevel() {
       // TODO 13 goes below here
 var level = levelData[currentLevel]
-var levelObjects = level.gameItems[i]
+var levelObjects = level.gameItems
 for (var i =0; i < level.gameItems.length; i++){
   var eachObject = levelObjects[i]
   if (eachObject.type = "sawblade"){
