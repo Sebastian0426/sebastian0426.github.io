@@ -53,7 +53,8 @@ enemy.onPlayerCollision = function () {
 enemy.onProjectileCollison = function () {
   game.increaseScore(100);
 enemy.fadeOut();
-}}
+}
+}
 // createEnemy(400, groundY - 10);
 // createEnemy(800, groundY - 100);
 // createEnemy(1200, groundY - 50);
