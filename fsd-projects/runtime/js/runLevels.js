@@ -72,7 +72,7 @@ function createReward(x, y){
   }
 }
 function createMarker(x, y){
-  var marker = game.createGameItem("marker", 1000)
+  var marker = game.createGameItem("marker", 200)
   var yellowPole = draw.rect(10, 1000, "yellow")
   yellowPole.x = -25
   yellowPole.y = -25
