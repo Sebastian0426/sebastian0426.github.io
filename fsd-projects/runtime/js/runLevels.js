@@ -45,7 +45,7 @@ redSquare.y = -25;
 enemy.addChild(redSquare);
 enemy.x = x;
 enemy.y = y;
-enemy.velocityX = 4
+enemy.velocityX = -4
 game.addGameItem(enemy);
 enemy.onPlayerCollision = function () {
   game.changeIntegrity(-10)
@@ -65,7 +65,7 @@ function createReward(x, y){
   reward.addChild(greenSquare)
   reward.x = x
   reward.y = y
-  reward.velocityX = 3
+  reward.velocityX = -2
   game.addGameItem(reward)
   reward.onPlayerCollision = function(){
     game.changeIntegrity(+20)
@@ -79,7 +79,7 @@ function createMarker(x, y){
   marker.addChild(yellowPole)
   marker.x = x
   marker.y = y
-  marker.velocityX = 1
+  marker.velocityX = -1
   game.addGameItem(marker)
   marker.onPlayerCollision = function(){
     startLevel()
