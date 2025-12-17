@@ -68,7 +68,7 @@ function createReward(x, y){
   reward.velocityX = -2
   game.addGameItem(reward)
   reward.onPlayerCollision = function(){
-    game.changeIntegrity(+20)
+    game.changeIntegrity(20)
   }
 }
 function createMarker(x, y){
